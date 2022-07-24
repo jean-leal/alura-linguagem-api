@@ -1,11 +1,17 @@
 package br.com.alura.linguagens.api;
 
+@Document(collection = "principaisLinguagens")
 public class Linguagem {
 
+    @Id
+    private String id;
     private String title;
     private String image;
     private int ranking;
 
+    public Linguagem(){
+
+    }
     
 
     public Linguagem(String title, String image, int ranking) {
@@ -13,6 +19,11 @@ public class Linguagem {
         this.image = image;
         this.ranking = ranking;
     }
+
+    public String getId(){
+        return id;
+    }
+
     public String getTitle() {
         return title;
     }
